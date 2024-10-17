@@ -8,19 +8,7 @@ class OpenF1API:
         """Initialize the OpenF1API object."""
         self.base_url = base_url
 
-    def car_data(self, driver_number: int, session_key: str, speed: int = None) -> dict:
-        """
-        Get car data from the OpenF1 API.
-
-        Args:
-            driver_number (int): The driver number.
-            session_key (str): The session key.
-            speed (int, optional): Filter results for speeds greater than or equal to this value.
-
-        Returns:
-            dict: The API response data.
-        """
-
+    def car_data(self, driver_number: int, session_key: str, speed: int = None):
         endpoint = "car_data"
         params = {
             "driver_number": driver_number,
